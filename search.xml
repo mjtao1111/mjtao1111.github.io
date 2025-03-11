@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello World</title>
+    <url>/2025/03/08/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>hexo搭建个人博客</title>
+    <url>/2025/03/11/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<h2 id="一、搭建思路"><a href="#一、搭建思路" class="headerlink" title="一、搭建思路"></a>一、搭建思路</h2><p>采用hexo+guihub搭建，全程免费。</p>
+<p>步骤：</p>
+<p>1、先安装node.js</p>
+<p>2、安装git</p>
+<h2 id="二、安装的具体步骤"><a href="#二、安装的具体步骤" class="headerlink" title="二、安装的具体步骤"></a>二、安装的具体步骤</h2><h3 id="1、安装node"><a href="#1、安装node" class="headerlink" title="1、安装node"></a>1、安装node</h3><ol>
+<li><p>打开node官网：</p>
+<p> <a href="https://nodejs.org/zh-cn">Node.js — 在任何地方运行 JavaScript (nodejs.org)</a></p>
+</li>
+</ol>
+<p>​       <a href="https://cdn.jsdelivr.net/gh/mjtao1111/picture/main/202503081834217.png">官网</a></p>
+<ol start="2">
+<li><p>点击下载</p>
+</li>
+<li><p>安装</p>
+</li>
+</ol>
+<p>​        安装时一直下一步即可，    建议安装路径选择其他盘符。</p>
+<ol start="4">
+<li><p>打开cmd，查看是否安装成功。</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+
+<p> <img src="https://cdn.jsdelivr.net/gh/mjtao1111/picture/main/202503082125241.png" alt="1741440353234(1)"></p>
+</li>
+</ol>
+<h3 id="2、安装GIT"><a href="#2、安装GIT" class="headerlink" title="2、安装GIT"></a>2、安装GIT</h3><ol>
+<li>打开GIT官网</li>
+</ol>
+<p>打开官网：<a href="https://git-scm.com/">Git (git-scm.com)</a>，下拉选择download for windows</p>
+<ol start="2">
+<li>下载GIT</li>
+</ol>
+<ul>
+<li><p>点进去后，选择64-bit Git for windows Setup.</p>
+</li>
+<li><p>但因为guihub国内可能存在无法访问的情况，因此若出现页面无法显示的情况，需下载watt tookit.</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#1 进入watt tookit官网，下载windows版本</span><br><span class="line">#2 安装后，点击网络加速--&gt;github--&gt;一键加速，ok</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>打开watt tookit并加速后，再次下载git.</li>
+<li>安装git</li>
+</ul>
+<ol start="3">
+<li><p>验证是否安装成功</p>
+<p> 打开cmd</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git -v</span><br></pre></td></tr></table></figure>
+
+<p> <img src="https://cdn.jsdelivr.net/gh/mjtao1111/picture/main/202503082127861.png" alt="1741440465972(1)"></p>
+</li>
+</ol>
+<h3 id="3、安装VSCODE"><a href="#3、安装VSCODE" class="headerlink" title="3、安装VSCODE"></a>3、安装VSCODE</h3><p>配置时采用vscode比较方便。下载并安装.</p>
+<ol>
+<li>官网下载<a href="https://code.visualstudio.com/">Visual Studio Code - Code Editing. Redefined</a></li>
+<li>安装vscode，安装好后，在扩展里搜索chinese,安装中文插件，重启vscode,ok.</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/mjtao1111/picture/main/202503082109734.png" alt="1741439379024"></p>
+<h3 id="4、安装hexo"><a href="#4、安装hexo" class="headerlink" title="4、安装hexo"></a>4、安装hexo</h3><ol>
+<li><p>进入npm镜像站（阿里）</p>
+<p> 输入官网地址：<a href="https://npmmirror.com/">npmmirror 镜像站</a></p>
+</li>
+<li><p>主页上复制如下代码：</p>
+<p> npm install -g cnpm –registry&#x3D;<a href="https://registry.npmmirror.com/">https://registry.npmmirror.com</a></p>
+</li>
+<li><p>调出命令提示符，cmd</p>
+</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npmmirror.com</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li><p>调出命令提示符，cmd</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="三、配置"><a href="#三、配置" class="headerlink" title="三、配置"></a>三、配置</h2><h3 id="1、vscode"><a href="#1、vscode" class="headerlink" title="1、vscode"></a>1、vscode</h3><ol>
+<li>在电脑中新建文件夹，如d:&#x2F;code&#x2F;hexo，vscode启动页面中，选择打开hexo文件夹；</li>
+<li>VSCODE中依次选择终端—&gt;新建终端，在新建终端窗口右侧下拉选择&#x3D;&#x3D;git bash&#x3D;&#x3D;</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/mjtao1111/picture/main/202503082154521.png" alt="image-20250308215429406"></p>
+<ol start="3">
+<li><p>在终端窗口中，输入如下命令：</p>
+ <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">hexo init heo<span class="comment">#在hexo文件夹下新建heo文件夹</span></span><br><span class="line">cd heo<span class="comment">#打开heo文件夹</span></span><br><span class="line">cnpm install<span class="comment">#初始化博客框架</span></span><br><span class="line">hexo g</span><br><span class="line">hexo s<span class="comment">#出现博客地址http://localhost:4000/</span></span><br><span class="line">ctrl+c<span class="comment">#停止</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>浏览器中输入<a href="http://localhost:4000/%EF%BC%8C%E5%87%BA%E7%8E%B0%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%B5%E9%9D%A2">http://localhost:4000/，出现博客的初始化页面</a></p>
+<p> <img src="https://cdn.jsdelivr.net/gh/mjtao1111/picture/main/202503082244913.png" alt="image-20250308224454698"></p>
+</li>
+</ol>
+<h3 id="2、主题设置"><a href="#2、主题设置" class="headerlink" title="2、主题设置"></a>2、主题设置</h3><h4 id="2-1-下载主题"><a href="#2-1-下载主题" class="headerlink" title="2.1 下载主题"></a>2.1 下载主题</h4><ol>
+<li><p>进入hexo官网，选择主题</p>
+</li>
+<li><p>搜索框中输入butterfly</p>
+</li>
+<li><p>在butterfly主题下，复制相关代码</p>
+</li>
+</ol>
+<p>  <img src="https://cdn.jsdelivr.net/gh/mjtao1111/picture/main/202503082244643.png" alt="image-20250308224404534"></p>
+<ol start="4">
+<li>打开vscode，在终端中输入刚才复制的butterfly主题代码</li>
+</ol>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>再次回到butterfly主题页面，下拉至configuration项目，复制如下代码：</li>
+</ol>
+<p>  <img src="https://cdn.jsdelivr.net/gh/mjtao1111/picture/main/202503082252186.png" alt="image-20250308225218099"></p>
+<ol start="6">
+<li>打开vscode，在终端中输入刚才复制的渲染器代码</li>
+</ol>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cnpm install hexo-renderer-pug hexo-renderer-stylus</span><br></pre></td></tr></table></figure>
+
+<ol start="7">
+<li>此时可以看到vscode文件夹中themes主题中多了butterfly主题.</li>
+</ol>
+<h4 id="2-2-主题配置"><a href="#2-2-主题配置" class="headerlink" title="2.2 主题配置"></a>2.2 主题配置</h4><ol>
+<li><p>在heo中找到_config.yml</p>
+</li>
+<li><p>在_config.yml代码栏里下拉找到theme:landscape,将landscape替换成butterfly，按ctrl+s保存</p>
+</li>
+</ol>
+<p>  <img src="https://cdn.jsdelivr.net/gh/mjtao1111/picture/main/202503082300157.png" alt="image-20250308230057058"></p>
+<ol start="3">
+<li><p>在vscode中输入如下代码</p>
+ <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">hexo cl <span class="comment">#清除</span></span><br><span class="line">hexo g  <span class="comment">#生成静态文件</span></span><br><span class="line">hexo s  <span class="comment">#本地查看网页</span></span><br></pre></td></tr></table></figure>
+
+<p> 复制<a href="http://localhost:4000/">http://localhost:4000/</a> 到浏览器中，可以看到主题已经设置成butterfly.</p>
+</li>
+</ol>
+<h4 id="2-3-更改主题图片"><a href="#2-3-更改主题图片" class="headerlink" title="2.3 更改主题图片"></a>2.3 更改主题图片</h4><ol>
+<li><p>进入hexo网站butterfly主题中，下拉点击可查看demo中最终完成后的样子。</p>
+</li>
+<li><p>点击DOC文档，选择chinese,进入文档查看具体配置方案。</p>
+</li>
+<li><p>在hexo的根目录创建一个文件用以备份butterfly主题，复制文档中名字</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">_config.buterfly.yml</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>打开vscode，在hexo根目录下，右键选择新建文件夹，名字为刚才文档中复制的名称。</p>
+</li>
+<li><p>点击themes下butterfly主题中的配置文件_config.yml，复制其配置文件代码</p>
+</li>
+<li><p>进入第4步中刚创建的文件_config.buterfly.yml，将第5步中复制的buterfly配置代码复制到_config.buterfly.yml中</p>
+</li>
+<li><p>对主题进行更改</p>
+<ul>
+<li><p>更改图片</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">进入_config.buterfly.yml配置文件中，找到index_img；</span><br><span class="line">在index_img后输入你想替换的图片的URL，按ctrl+s保存；</span><br><span class="line">在vscode终端输入窗口中依次输入：</span><br><span class="line">     hexo cl</span><br><span class="line">     hexo g</span><br><span class="line">     hexo s</span><br><span class="line">进入网页中输入http://localhost:4000/ 可以看到主题里的背景图片已变成你替换后的图片</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>更改图片的另一种方法</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">点击heo--&gt;thmes--&gt;source--&gt;img</span><br><span class="line">将你想要替换的图片拖入到img文件夹中，可修改文件名，如top.jpg</span><br><span class="line">在vscode中点开_config.buterfly.yml配置文件</span><br><span class="line">找到index_img,输入/img/top.jpg,ctrl+s保存</span><br><span class="line">运行hexo s</span><br><span class="line">在浏览器中输入http://localhost:4000/，查看此时图片已变化</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<h4 id="2-4-更改标题"><a href="#2-4-更改标题" class="headerlink" title="2.4  更改标题"></a>2.4  更改标题</h4><ol>
+<li><p>进入heo下的根目录，找到_config.yml</p>
+</li>
+<li><p>在代码栏里找到title、author等,可根据需要进行修改.</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">title:martin&#x27;s blog</span><br><span class="line">author:martin</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>hexo s，在浏览器中查看修改后的标题和作者</p>
+</li>
+</ol>
+<h3 id="3、部署到网页"><a href="#3、部署到网页" class="headerlink" title="3、部署到网页"></a>3、部署到网页</h3><h4 id="3-1-注册guithub"><a href="#3-1-注册guithub" class="headerlink" title="3.1 注册guithub"></a>3.1 注册guithub</h4><ol>
+<li>进入guihub官网，按照步骤进行注册，过程需要提供邮箱，以及进行相关验证。</li>
+<li>登录guihub</li>
+</ol>
+<h4 id="3-2-在guithub中新建仓库"><a href="#3-2-在guithub中新建仓库" class="headerlink" title="3.2  在guithub中新建仓库"></a>3.2  在guithub中新建仓库</h4><ol>
+<li>在guihub右上角点击“+”，在下拉菜单中，选择“new repository”</li>
+<li>在”repository name”栏中填入你的仓库名，如blog</li>
+<li>“Description (optional)”为描述，选填。可填入：我的博客</li>
+<li>下面勾选“public”，选择后公众可访问</li>
+<li>勾选“Add a README file”</li>
+<li>点击“create repository”</li>
+<li>新的仓库创建完成</li>
+</ol>
+<h4 id="3-3-获取密钥"><a href="#3-3-获取密钥" class="headerlink" title="3.3 获取密钥"></a>3.3 获取密钥</h4><ol>
+<li>在guihub页面中点击头像，选择”settings”</li>
+<li>下拉到底，选择“developer settings”</li>
+<li>点击“personal access tokens”,选择“tokens(classic)”</li>
+<li>点击“Generate new token”,选择“Generate new token（classic）”</li>
+<li>在note栏中，输入密钥概述，可随便输入，如：for blog</li>
+<li>“Expiration”栏中选择该密钥的有效期，可随便选择，如90 days</li>
+<li>勾选“repo”,点击“generate token”</li>
+</ol>
+<h4 id="3-4-配置"><a href="#3-4-配置" class="headerlink" title="3.4 配置"></a>3.4 配置</h4><ol>
+<li><p>进入vscode,在_config.yml中找到deploy,在其中输入</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">type：git</span><br><span class="line">repo:git@github.com:your_username/your_username.github.io.git</span><br><span class="line">branch:main#新建仓库中的分支名</span><br></pre></td></tr></table></figure>
+
+<p> 然后运行如下命令：</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo cl</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p> 运行后可能会出现以下错误：error ：spawn failed</p>
+<p> 此时需要重新配置ssh,参照此篇博客内容进行操作<a href="https://www.cnblogs.com/Archer314/p/14641310.html">解决ssh: connect to host github.com port 22: Connection refused - Biile - 博客园 (cnblogs.com)</a></p>
+</li>
+</ol>
+<h4 id="3-5-托管"><a href="#3-5-托管" class="headerlink" title="3.5 托管"></a>3.5 托管</h4><p>将网站托管到cloudflare，可参考<a href="https://www.bilibili.com/video/BV1nY6xYmEw7/?spm_id_from=333.337.search-card.all.click">从0到1搭建免费个人博客，保姆级教程！无服务器、零代码、国内&#x2F;国外网络，流畅访问！「Cloudflare + GitHub + Hexo」_哔哩哔哩_bilibili</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>typora学习手册</title>
+    <url>/2025/03/11/%E5%AD%A6%E4%B9%A0%E6%89%8B%E5%86%8C/</url>
+    <content><![CDATA[<h2 id="一-、概述"><a href="#一-、概述" class="headerlink" title="一 、概述"></a>一 、概述</h2><h3 id="1、简介"><a href="#1、简介" class="headerlink" title="1、简介"></a>1、简介</h3><p> typora是一款轻量级但功能强大的markdown编辑器，支持实时预览、多种格式导出、自定义主题等功能。可以用来记笔记，写技术类的文档。不仅仅适用于程序员，同时也是一款好用的码字、写材料的工具。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">ps：写小说也可以用哦</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、下载及安装"><a href="#2、下载及安装" class="headerlink" title="2、下载及安装"></a>2、下载及安装</h3><p>搜索typora中文官网：<a href="https://typoraio.cn/">Typora 官方中文站</a>可根据自身系统进行下载。有米的请支持正版，也可参照以下两个网站步骤进行安装（方法引至CSDN，感谢各位）。</p>
+<ul>
+<li>激活方法（目前版本1.9.5以前可用）：<a href="https://blog.csdn.net/qq_61621323/article/details/141036982">Typora 免费安装教程（已支持最新版 1.9.5）_typora免费安装-CSDN博客</a></li>
+<li>不激活通过修改配置文件方法（各版本均可用）：<a href="https://blog.csdn.net/weixin_45320660/article/details/135482861">typora 序列号（不使用也可以激活）_typora离线激活-CSDN博客</a></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ps:不缺这三瓜两枣的尽量购买</span><br></pre></td></tr></table></figure>
+
+<h2 id="二-、使用手册"><a href="#二-、使用手册" class="headerlink" title="二  、使用手册"></a>二  、使用手册</h2><h3 id="1、基本设置"><a href="#1、基本设置" class="headerlink" title="1、基本设置"></a>1、基本设置</h3><p>以下是typora中常见的设置，其余可以保持默认</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#1 点开文件--&gt;偏好设置--&gt;文件选项--&gt;保存&amp;恢复中勾选“自动保存”</span><br><span class="line">#2 点开文件--&gt;偏好设置--&gt;markdown选项--&gt;markdown语法偏好--&gt;勾选“严格模式”</span><br><span class="line">#3 点开文件--&gt;偏好设置--&gt;markdown选项--&gt;markdown扩展语法--&gt;全部勾选</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、文档编辑相关"><a href="#2、文档编辑相关" class="headerlink" title="2、文档编辑相关"></a>2、文档编辑相关</h3><h4 id="2-1-标题"><a href="#2-1-标题" class="headerlink" title="2.1 标题"></a>2.1 标题</h4><p>标题会在目录于大纲分级显示，可以跳转。在typora中开启<span style='color:red;background:yellow'>严格模式</span>，即不应为<span style='color:red;background:yellow'>#标题</span>，应为<span style='color:red;background:yellow'># 标题</span>，设置方法如下：数个“#”+空格 前置</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-2-强调"><a href="#2-2-强调" class="headerlink" title="2.2 强调"></a>2.2 强调</h4><p>用“**”或“—”包围，或者选中要强调的文字按下ctrl+B.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#1  **我喜欢学习typora**</span><br><span class="line">#2  __我喜欢学习typora__</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<p><strong>我喜欢学习typora</strong></p>
+<h4 id="2-3-斜体"><a href="#2-3-斜体" class="headerlink" title="2.3 斜体"></a>2.3 斜体</h4><p>用“*”或“—”包围，或者选中文字按下ctrl+I.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#1 *我喜欢学习typora*</span><br><span class="line">#2 _我喜欢学习typora_</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<p><em>我喜欢学习typora</em></p>
+<p><em><strong>如果需要斜体并强调</strong></em>，【则加三个“*”或者三个“—”.】</p>
+<h4 id="2-4-删除线"><a href="#2-4-删除线" class="headerlink" title="2.4 删除线"></a>2.4 删除线</h4><p>用“~~”包围，或者shift+alt+5</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">~~学习治好了我的焦虑~~</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<p><del>学习治好了我的焦虑</del></p>
+<p><del>学习使我快乐</del></p>
+<h4 id="2-5-高亮"><a href="#2-5-高亮" class="headerlink" title="2.5 高亮"></a>2.5 高亮</h4><p>用“&#x3D;&#x3D;”包围</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">==每月坚持学习一项新东西==</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<p>&#x3D;&#x3D;每月坚持学习一项新东西&#x3D;&#x3D;</p>
+<h4 id="2-6-代码"><a href="#2-6-代码" class="headerlink" title="2.6 代码"></a>2.6 代码</h4><p>用“&#96;”包围</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">`print(&quot;hello, world!&quot;)`</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<p><code>print(&quot;hello, world!&quot;)</code></p>
+<h4 id="2-7-代码块"><a href="#2-7-代码块" class="headerlink" title="2.7 代码块"></a>2.7 代码块</h4><p>按三个“&#96;”并敲回车，要想显示行数，需要在typora的设置里进行勾选，另外代码块里可以选择语言，其会根据语言（如python）来自动高亮各个语句。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">python</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-8-引用"><a href="#2-8-引用" class="headerlink" title="2.8 引用"></a>2.8 引用</h4><p>用“&gt;” 前置，需要嵌套使用，则多加一个“&gt;”</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;引用就是在前面加竖线</span><br><span class="line">&gt;&gt;这个就是在嵌套</span><br><span class="line">&gt;&gt;&gt;三重嵌套，过瘾把</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<blockquote>
+<p>引用就是在前面加竖线</p>
+<blockquote>
+<p>这个就是在嵌套</p>
+<blockquote>
+<p>三重嵌套，过瘾把</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h4 id="2-9-无序列表"><a href="#2-9-无序列表" class="headerlink" title="2.9 无序列表"></a>2.9 无序列表</h4><p>用“-”或“+”+<strong>空格</strong> 前置，回车后按下‘tab“键后，会自动缩进一级。按下”ctrl+[“,取消缩进，回到行首。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">- 相当于在文字前加实心点</span><br><span class="line">+ 一样的效果</span><br><span class="line">* 也行，不过因为一般会自动补全为两个*，所以不常用</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<ul>
+<li>相当于在文字前加实心点<ul>
+<li>按下tab键后会自动缩进一级<ul>
+<li>再按tab,在缩进一级<ul>
+<li>再按继续缩进</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-10-有序列表"><a href="#2-10-有序列表" class="headerlink" title="2.10 有序列表"></a>2.10 有序列表</h4><p>数字+”.“+空格 前置，回车会自动补全，回车后按下tab键后会缩进一级</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 我讲三点，这是第一点</span><br><span class="line">2. 这是第二点</span><br><span class="line">3. 这是第三点</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<ol>
+<li>我讲三点，这是第一点</li>
+<li>这是第二点</li>
+<li>这是第三点<ol>
+<li>回车后按tab会缩进<ol>
+<li>再按在缩进</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h4 id="2-11-上标"><a href="#2-11-上标" class="headerlink" title="2.11 上标"></a>2.11 上标</h4><p>用”^“包围</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">如2^10^=1024</span><br><span class="line">参考文献^[1][2]^</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<p>2^10^&#x3D;1024</p>
+<p>参考文献^[1][2]^</p>
+<h4 id="2-12-下标"><a href="#2-12-下标" class="headerlink" title="2.12 下标"></a>2.12 下标</h4><p>用“~”包围</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">co~2~灭火器</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<p>co<del>2</del>灭火器</p>
+<h4 id="2-13-下划线"><a href="#2-13-下划线" class="headerlink" title="2.13 下划线"></a>2.13 下划线</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;u&gt;+要下划线的文字+&lt;/u&gt;</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<p> <u>下划线</u></p>
+<h4 id="2-14-注释"><a href="#2-14-注释" class="headerlink" title="2.14 注释"></a>2.14 注释</h4><p>“[^]”后置</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt;难忘今宵，明年在相会！[^1]</span><br><span class="line"></span><br><span class="line">1:春节联欢晚会</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>难忘今宵，明年在相会！[^1]</p>
+</blockquote>
+<p>1:春节联欢晚会</p>
+<h4 id="2-15-链接"><a href="#2-15-链接" class="headerlink" title="2.15 链接"></a>2.15 链接</h4><p>常用“[]”+“()”分别包围文本与链接</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#1 外链（需按住ctrl）：[大家可以访问typora官方中文站](https://typoraio.cn/)</span><br><span class="line">#2 文内跳转（需按住ctrl）：[跳转到 2.3 斜体](#2.3 斜体)</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<p><a href="https://typoraio.cn/">大家可以访问typora官方中文站</a></p>
+<p>[跳转到 2.3 斜体](#2.3 斜体)</p>
+<h4 id="2-16-任务列表"><a href="#2-16-任务列表" class="headerlink" title="2.16 任务列表"></a>2.16 任务列表</h4><p>采用“-  [ ]”+空格 前置或快捷键ctrl+shift+x</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">今天的任务：</span><br><span class="line">- [ ] 送小孩上学</span><br><span class="line">- [ ] 学习typora</span><br><span class="line">- [ ] 接小孩</span><br><span class="line">- [x] 吃饭</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<p>今天的任务：</p>
+<ul>
+<li><input disabled="" type="checkbox"> 送小孩上学</li>
+<li><input disabled="" type="checkbox"> 学习typora</li>
+<li><input disabled="" type="checkbox"> 接小孩</li>
+<li><input checked="" disabled="" type="checkbox"> 吃饭</li>
+</ul>
+<h4 id="2-17-表格"><a href="#2-17-表格" class="headerlink" title="2.17  表格"></a>2.17  表格</h4><p>直接右键——&gt;插入——&gt;表格</p>
+<p>示例：</p>
+<table>
+<thead>
+<tr>
+<th>本周计划</th>
+<th>内容</th>
+<th>要求</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>周一</td>
+<td>学习typora</td>
+<td>对学习情况进行记录</td>
+</tr>
+<tr>
+<td>周二</td>
+<td>运动</td>
+<td>消耗2000卡</td>
+</tr>
+<tr>
+<td>周三</td>
+<td>看哪吒2</td>
+<td>二刷，并安利身边至少5个人</td>
+</tr>
+</tbody></table>
+<h4 id="2-18-图片"><a href="#2-18-图片" class="headerlink" title="2.18 图片"></a>2.18 图片</h4><p>直接拖进来或者复制粘贴，设置中可以更改图片的存储方式，更进一步的的学习，可以参照如下链接（引用自CSDN）：</p>
+<p><a href="https://blog.csdn.net/young2415/article/details/112750161">Typora使用技巧之插入图片及图片上传_typora插入图片-CSDN博客</a></p>
+<h4 id="2-19-表情"><a href="#2-19-表情" class="headerlink" title="2.19 表情"></a>2.19 表情</h4><p>“：”+表情英文+“：”，具体表情的英文可以参考CSDN中这篇链接：<a href="https://blog.csdn.net/weixin_42395140/article/details/111642339">Typora中的emoji表情_typora emoji-CSDN博客</a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">:smile:</span><br><span class="line">:laughing:</span><br><span class="line">:heart_eyes:</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<p>:smile:<br>:laughing:<br>:heart_eyes:</p>
+<h2 id="三-、其他功能"><a href="#三-、其他功能" class="headerlink" title="三 、其他功能"></a>三 、其他功能</h2><h3 id="1、目录"><a href="#1、目录" class="headerlink" title="1、目录"></a>1、目录</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[TOC]参见本文档开头</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、数学公式"><a href="#2、数学公式" class="headerlink" title="2、数学公式"></a>2、数学公式</h3><p>选择段落——&gt;公式块，采用“$”包围，关于常见的公式语法，可参见CSDN，链接如下：<a href="https://blog.csdn.net/qq_43444349/article/details/105400052">全面整理Typora的Latex数学公式语法_latex数学公式中间回车-CSDN博客</a></p>
+<p>示例：<br>$$<br>sin^2+cos^2&#x3D;1<br>$$</p>
+<h3 id="3、主题样式"><a href="#3、主题样式" class="headerlink" title="3、主题样式"></a>3、主题样式</h3><p>在 Typora 中自定义主题可以按照以下步骤进行操作：</p>
+<ol>
+<li><p><strong>找到主题文件夹</strong> 打开 Typora 软件，点击菜单栏中的 “文件”，选择 “偏好设置”（在 Mac 系统中是 “Typora” -&gt; “偏好设置”）。在打开的偏好设置窗口中，点击左侧的 “外观” 选项。在右侧找到 “打开主题文件夹” 按钮并点击，这会打开 Typora 的主题文件夹。</p>
+</li>
+<li><p><strong>选择基础主题（可选）</strong> 在主题文件夹中，你会看到许多已经存在的主题文件（.css 格式）。你可以选择一个现有的主题作为基础来进行修改，这样可以减少一些基础样式的编写工作。例如，复制一份 <code>github.css</code> 文件，并将复制后的文件重命名为你想要的新主题名称，比如 <code>my_custom_theme.css</code>。 </p>
+</li>
+<li><p><strong>编辑主题 CSS 文件</strong> 使用文本编辑器（如 Notepad++、Sublime Text、Visual Studio Code 等）打开你刚才复制并重命名的 CSS 文件（<code>my_custom_theme.css</code>）。在这个 CSS 文件中，你可以根据自己的喜好修改各种样式。以下是一些常见的样式修改示例：  </p>
+<ul>
+<li><strong>修改字体</strong>： <ul>
+<li><code>css body &#123;    font-family: Arial, sans-serif; /* 这里可以换成你喜欢的字体 */    font-size: 16px; /* 修改字体大小 */ &#125; </code></li>
+</ul>
+</li>
+<li><strong>修改标题样式</strong>： <ul>
+<li><code>css h1 &#123;    color: #333; /* 修改一级标题颜色 */    border-bottom: 2px solid #ccc; /* 在一级标题下方添加边框 */    padding-bottom: 5px; /* 标题下方内边距 */ &#125; </code></li>
+</ul>
+</li>
+<li><strong>修改代码块样式</strong>： <ul>
+<li><code>css code, pre &#123;    background-color: #f4f4f4; /* 修改代码块和行内代码的背景颜色 */    border: 1px solid #ccc; /* 添加边框 */    border-radius: 3px; /* 圆角 */    padding: 2px 4px; /* 内边距 */ &#125; </code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>保存并应用主题：</strong></p>
+<p> 完成 CSS 文件的修改后，保存文件。然后回到 Typora 的偏好设置窗口，在 “外观” 选项中，点击 “主题” 下拉菜单，你应该能看到你自定义的主题名称，选择它即可应用你刚刚自定义的主题。 通过以上步骤，你就可以在 Typora 中创建并使用自己的自定义主题了。你可以不断调整 CSS 样式，直到达到你满意的效果。</p>
+</li>
+</ol>
+<h3 id="4、画图"><a href="#4、画图" class="headerlink" title="4、画图"></a>4、画图</h3><p>采用typora可进行画图操作，常见流程图、甘特图、时序图、饼图等等，均可通过代码实现。前提在文件——&gt;偏好设置——&gt;markdown——&gt;markdown扩展语法——&gt;勾选图表</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">```mermaid</span><br><span class="line">graph LR;</span><br><span class="line">a--&gt;b</span><br><span class="line">b--&gt;c</span><br><span class="line">c--&gt;d</span><br><span class="line">d--&gt;a</span><br><span class="line">```</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">graph LR;</span><br><span class="line">a--&gt;b</span><br><span class="line">b--&gt;c</span><br><span class="line">c--&gt;d</span><br><span class="line">d--&gt;a</span><br></pre></td></tr></table></figure>
+
+<h2 id="四、常用快捷键"><a href="#四、常用快捷键" class="headerlink" title="四、常用快捷键"></a>四、常用快捷键</h2><p>以下是typora中常见的快捷键：</p>
+<table>
+<thead>
+<tr>
+<th align="center">按键</th>
+<th align="center">效果</th>
+<th align="center">按键</th>
+<th align="center">效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>Ctrl</code> + <code>D</code></td>
+<td align="center">选中当前词</td>
+<td align="center"><code>Ctrl</code> + <code>L</code></td>
+<td align="center">选中当前句&#x2F;行</td>
+</tr>
+<tr>
+<td align="center"><code>Ctrl</code> + <code>E</code></td>
+<td align="center">选中当前区块</td>
+<td align="center"><code>Ctrl</code> + <code>F</code></td>
+<td align="center">搜索当前选中</td>
+</tr>
+<tr>
+<td align="center"><code>Ctrl</code> + <code>B</code></td>
+<td align="center">加粗当前选中</td>
+<td align="center"><code>Ctrl</code> + <code>H</code></td>
+<td align="center">替换当前选中</td>
+</tr>
+<tr>
+<td align="center"><code>Ctrl</code> + <code>I</code></td>
+<td align="center">倾斜当前选中</td>
+<td align="center"><code>Ctrl</code> + <code>U</code></td>
+<td align="center">下划当前选中</td>
+</tr>
+<tr>
+<td align="center"><code>Ctrl</code> + <code>K</code></td>
+<td align="center">将当前选中生成链接</td>
+<td align="center"><code>Ctrl</code> + <code>J</code></td>
+<td align="center">滚动屏幕将选中滚至顶部</td>
+</tr>
+<tr>
+<td align="center"><code>Ctrl</code> + <code>W</code></td>
+<td align="center">关闭当前窗口</td>
+<td align="center"><code>Ctrl</code> + <code>N</code></td>
+<td align="center">打开新窗口</td>
+</tr>
+<tr>
+<td align="center"><code>Ctrl</code> + <code>O</code></td>
+<td align="center">打开文件</td>
+<td align="center"><code>Ctrl</code> + <code>P</code></td>
+<td align="center">搜索文件并打开</td>
+</tr>
+<tr>
+<td align="center"><code>Ctrl</code> + <code>回车</code></td>
+<td align="center">表格下方插入行</td>
+<td align="center"><code>Ctrl</code> + <code>,</code></td>
+<td align="center">打开偏好设置</td>
+</tr>
+<tr>
+<td align="center"><code>Ctrl</code> + <code>.</code></td>
+<td align="center">切换全角&#x2F;半角标点</td>
+<td align="center"><code>Ctrl</code> + <code>/</code></td>
+<td align="center">切换正常&#x2F;源代码视图</td>
+</tr>
+<tr>
+<td align="center"><code>Ctrl</code> + <code>Shift</code> + <code>-</code></td>
+<td align="center">缩小视图缩放</td>
+<td align="center"><code>Ctrl</code> + <code>Shift</code> + <code>+</code></td>
+<td align="center">放大视图缩放</td>
+</tr>
+</tbody></table>
+<h2 id="五、总结"><a href="#五、总结" class="headerlink" title="五、总结"></a>五、总结</h2><p>typora是一款开源的markdown编辑器，给了人们很大的自由创作空间，且非常高效、简洁，相比word更加纯粹，另一方面长期使用typora，可培养程序化的思维，不管工作还是生活，都大有裨益。最后还可以用它写文章，也是一种相当不错的体验。:smile:</p>
+]]></content>
+  </entry>
+</search>
